@@ -382,7 +382,7 @@ function IntroScreen({ onStart }) {
     <div style={{
       minHeight: "100vh",
       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-      background: "linear-gradient(180deg, #1a0a0a 0%, #2d1010 50%, #1a0a0a 100%)",
+      background: "#4899a3",
       padding: "2rem 1.5rem", textAlign: "center", position: "relative", overflow: "hidden",
     }}>
       <div style={{ position: "absolute", top: 30, left: 20, fontSize: 60, opacity: 0.06 }}>☁️</div>
@@ -395,19 +395,18 @@ function IntroScreen({ onStart }) {
 
       <h1 style={{
         fontSize: "clamp(2rem, 8vw, 3.2rem)", fontWeight: 900,
-        background: "linear-gradient(135deg, #F59E0B, #EF4444, #F59E0B)",
-        WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+        color: "#fff",
         lineHeight: 1.2, marginBottom: 8, letterSpacing: "0.05em",
       }}>
         西游人格测试
       </h1>
 
-      <p style={{ color: "#D4A574", fontSize: "1.1rem", marginBottom: 8, letterSpacing: "0.15em" }}>
+      <p style={{ color: "#e3f2f3", fontSize: "1.1rem", marginBottom: 8, letterSpacing: "0.15em" }}>
         X I Y O U · B T I
       </p>
 
       <p style={{
-        color: "#a08060", fontSize: "1rem", marginBottom: 48,
+        color: "#e3f2f3", fontSize: "1rem", marginBottom: 48,
         maxWidth: 320, lineHeight: 1.6,
       }}>
         15道题，测测你是取经路上的谁<br />
@@ -417,11 +416,11 @@ function IntroScreen({ onStart }) {
       <button
         onClick={onStart}
         style={{
-          background: "linear-gradient(135deg, #DC2626, #B91C1C)",
+          background: "#9474a4",
           color: "#fff", border: "none", borderRadius: 50,
           padding: "16px 48px", fontSize: "1.1rem", fontWeight: 700,
           cursor: "pointer", letterSpacing: "0.1em",
-          boxShadow: "0 0 30px rgba(220,38,38,0.4), 0 4px 15px rgba(0,0,0,0.3)",
+          boxShadow: "0 10px 24px rgba(89,58,104,0.28)",
           transition: "transform 0.2s, box-shadow 0.2s",
         }}
         onMouseEnter={(e) => { e.target.style.transform = "scale(1.05)"; }}
@@ -430,7 +429,7 @@ function IntroScreen({ onStart }) {
         开始测试
       </button>
 
-      <p style={{ color: "#5a4030", fontSize: "0.75rem", marginTop: 48 }}>
+      <p style={{ color: "rgba(0,0,0,0.5)", fontSize: "0.75rem", marginTop: 48 }}>
         共 15 题 · 约 2 分钟
       </p>
     </div>
@@ -469,10 +468,10 @@ function QuestionScreen({ questions, onFinish }) {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(180deg, #1a0a0a 0%, #2d1010 100%)",
+      background: "linear-gradient(180deg, #f7f8f9 0%, #ffffff 100%)",
       display: "flex", flexDirection: "column", padding: "0",
     }}>
-      <div style={{ height: 3, background: "#2a1515", width: "100%" }}>
+      <div style={{ height: 3, background: "#e0e0e0", width: "100%" }}>
         <div style={{
           height: "100%", background: "linear-gradient(90deg, #F59E0B, #EF4444)",
           width: `${progress}%`, transition: "width 0.4s ease",
@@ -485,7 +484,7 @@ function QuestionScreen({ questions, onFinish }) {
         alignItems: "center", justifyContent: "center",
         padding: "2rem 1.5rem", maxWidth: 480, margin: "0 auto", width: "100%",
       }}>
-        <div style={{ color: "#a08060", fontSize: "0.85rem", marginBottom: 24, letterSpacing: "0.1em" }}>
+        <div style={{ color: "#6c7780", fontSize: "0.85rem", marginBottom: 24, letterSpacing: "0.1em" }}>
           <span style={{ color: "#F59E0B", fontWeight: 700, fontSize: "1.1rem" }}>{idx + 1}</span>
           <span> / {questions.length}</span>
         </div>
@@ -497,7 +496,7 @@ function QuestionScreen({ questions, onFinish }) {
           width: "100%",
         }}>
           <p style={{
-            color: "#f0dcc0", fontSize: "clamp(1.05rem, 4.5vw, 1.25rem)", fontWeight: 600,
+            color: "#2f3a45", fontSize: "clamp(1.05rem, 4.5vw, 1.25rem)", fontWeight: 600,
             textAlign: "center", lineHeight: 1.6, marginBottom: 32, minHeight: "3.2em",
           }}>
             {q.text}
@@ -511,10 +510,10 @@ function QuestionScreen({ questions, onFinish }) {
                 style={{
                   background: selected === oi
                     ? "linear-gradient(135deg, #DC2626, #B91C1C)"
-                    : "rgba(255,255,255,0.04)",
-                  border: selected === oi ? "1px solid #EF4444" : "1px solid rgba(255,255,255,0.08)",
+                    : "rgba(0,0,0,0.03)",
+                  border: selected === oi ? "1px solid #EF4444" : "1px solid rgba(0,0,0,0.08)",
                   borderRadius: 12, padding: "14px 18px",
-                  color: selected === oi ? "#fff" : "#d4a574",
+                  color: selected === oi ? "#fff" : "#555555",
                   fontSize: "0.95rem", textAlign: "left", cursor: "pointer",
                   transition: "all 0.2s",
                   transform: selected === oi ? "scale(1.02)" : "scale(1)",
@@ -525,8 +524,8 @@ function QuestionScreen({ questions, onFinish }) {
                 <span style={{
                   display: "inline-block", width: 22, height: 22, lineHeight: "22px",
                   textAlign: "center", borderRadius: "50%", marginRight: 10,
-                  background: selected === oi ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.06)",
-                  fontSize: "0.75rem", color: selected === oi ? "#fff" : "#a08060",
+                  background: selected === oi ? "rgba(0,0,0,0.2)" : "rgba(0,0,0,0.06)",
+                  fontSize: "0.75rem", color: selected === oi ? "#fff" : "#6c7780",
                   fontWeight: 700, verticalAlign: "middle",
                 }}>
                   {"ABCD"[oi]}
@@ -562,13 +561,13 @@ function ResultScreen({ character, scores, onRestart }) {
     c.width = W; c.height = H;
 
     const bg = ctx.createLinearGradient(0, 0, W, H);
-    bg.addColorStop(0, "#1a0a0a");
-    bg.addColorStop(0.5, "#2d1010");
-    bg.addColorStop(1, "#1a0a0a");
+    bg.addColorStop(0, "#f7f8f9");
+    bg.addColorStop(0.5, "#ffffff");
+    bg.addColorStop(1, "#f7f8f9");
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, W, H);
 
-    ctx.strokeStyle = "rgba(245,158,11,0.15)";
+    ctx.strokeStyle = "rgba(72,153,163,0.15)";
     ctx.lineWidth = 2;
     ctx.strokeRect(30, 30, W - 60, H - 60);
 
@@ -581,7 +580,7 @@ function ResultScreen({ character, scores, onRestart }) {
       ctx.stroke();
     });
 
-    ctx.fillStyle = "#5a4030";
+    ctx.fillStyle = "#999999";
     ctx.font = "500 20px system-ui, sans-serif";
     ctx.textAlign = "center";
     ctx.fillText("你的西游人格是", W / 2, 100);
@@ -603,11 +602,11 @@ function ResultScreen({ character, scores, onRestart }) {
     ctx.font = "bold 14px system-ui, sans-serif";
     ctx.fillText(rc.label, W / 2, badgeY + 22);
 
-    ctx.fillStyle = "#f0dcc0";
+    ctx.fillStyle = "#2f3a45";
     ctx.font = "bold 48px system-ui, sans-serif";
     ctx.fillText(character.name, W / 2, 380);
 
-    ctx.fillStyle = "#a08060";
+    ctx.fillStyle = "#6c7780";
     ctx.font = "500 20px system-ui, sans-serif";
     ctx.fillText(character.title, W / 2, 415);
 
@@ -615,7 +614,7 @@ function ResultScreen({ character, scores, onRestart }) {
     ctx.font = "italic 22px system-ui, sans-serif";
     ctx.fillText(character.quote, W / 2, 475);
 
-    ctx.strokeStyle = "rgba(245,158,11,0.15)";
+    ctx.strokeStyle = "rgba(72,153,163,0.15)";
     ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.moveTo(100, 510); ctx.lineTo(W - 100, 510);
@@ -645,11 +644,11 @@ function ResultScreen({ character, scores, onRestart }) {
     const dimNames = ["反骨指数","行动力","社交姿态","道德洁癖","欲望坦诚"];
     dimKeys.forEach((d, i) => {
       const y = barY0 + i * barGap;
-      ctx.fillStyle = "#5a4030";
+      ctx.fillStyle = "#999999";
       ctx.font = "500 15px system-ui, sans-serif";
       ctx.textAlign = "right";
       ctx.fillText(dimNames[i], 200, y + 12);
-      ctx.fillStyle = "rgba(255,255,255,0.05)";
+      ctx.fillStyle = "rgba(0,0,0,0.05)";
       ctx.beginPath();
       ctx.roundRect(220, y, barMaxW, barH, 8);
       ctx.fill();
@@ -666,10 +665,10 @@ function ResultScreen({ character, scores, onRestart }) {
     ctx.textAlign = "center";
     const tagY = barY0 + 5 * barGap + 10;
     ctx.font = "400 15px system-ui, sans-serif";
-    ctx.fillStyle = "#5a4030";
+    ctx.fillStyle = "#999999";
     ctx.fillText(character.tags.map(t => "#" + t).join("  "), W/2, tagY);
 
-    ctx.fillStyle = "#3a2510";
+    ctx.fillStyle = "#bbbbbb";
     ctx.font = "400 16px system-ui, sans-serif";
     ctx.fillText("西游人格测试 · XIYOU BTI", W / 2, H - 50);
 
@@ -688,7 +687,7 @@ function ResultScreen({ character, scores, onRestart }) {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(180deg, #1a0a0a 0%, #2d1010 50%, #1a0a0a 100%)",
+      background: "linear-gradient(180deg, #f7f8f9 0%, #ffffff 50%, #f7f8f9 100%)",
       display: "flex", flexDirection: "column", alignItems: "center",
       padding: "2rem 1.5rem", overflow: "auto",
     }}>
@@ -698,7 +697,7 @@ function ResultScreen({ character, scores, onRestart }) {
         transition: "opacity 0.6s ease, transform 0.6s ease",
         maxWidth: 420, width: "100%", textAlign: "center",
       }}>
-        <p style={{ color: "#5a4030", fontSize: "0.85rem", letterSpacing: "0.15em", marginBottom: 16 }}>
+        <p style={{ color: "#999999", fontSize: "0.85rem", letterSpacing: "0.15em", marginBottom: 16 }}>
           你的西游人格是
         </p>
 
@@ -719,12 +718,12 @@ function ResultScreen({ character, scores, onRestart }) {
         </div>
 
         <h2 style={{
-          color: "#f0dcc0", fontSize: "2rem", fontWeight: 800,
+          color: "#2f3a45", fontSize: "2rem", fontWeight: 800,
           marginBottom: 4, letterSpacing: "0.05em",
         }}>
           {character.name}
         </h2>
-        <p style={{ color: "#a08060", fontSize: "0.9rem", marginBottom: 16 }}>
+        <p style={{ color: "#6c7780", fontSize: "0.9rem", marginBottom: 16 }}>
           {character.title}
         </p>
 
@@ -735,8 +734,8 @@ function ResultScreen({ character, scores, onRestart }) {
         </p>
 
         <div style={{
-          background: "rgba(255,255,255,0.03)",
-          border: "1px solid rgba(245,158,11,0.1)",
+          background: "rgba(0,0,0,0.03)",
+          border: "1px solid rgba(72,153,163,0.1)",
           borderRadius: 16, padding: "20px 20px", marginBottom: 24, textAlign: "left",
         }}>
           <p style={{ color: "#c0a080", fontSize: "0.95rem", lineHeight: 1.8 }}>
@@ -749,8 +748,8 @@ function ResultScreen({ character, scores, onRestart }) {
             <span key={t} style={{
               padding: "4px 14px", borderRadius: 20,
               background: "rgba(245,158,11,0.08)",
-              border: "1px solid rgba(245,158,11,0.15)",
-              color: "#d4a574", fontSize: "0.8rem",
+              border: "1px solid rgba(72,153,163,0.15)",
+              color: "#555555", fontSize: "0.8rem",
             }}>
               #{t}
             </span>
@@ -758,11 +757,11 @@ function ResultScreen({ character, scores, onRestart }) {
         </div>
 
         <div style={{
-          background: "rgba(255,255,255,0.02)",
-          border: "1px solid rgba(255,255,255,0.05)",
+          background: "rgba(0,0,0,0.02)",
+          border: "1px solid rgba(0,0,0,0.05)",
           borderRadius: 16, padding: "20px 20px", marginBottom: 28,
         }}>
-          <p style={{ color: "#5a4030", fontSize: "0.75rem", marginBottom: 16, letterSpacing: "0.1em" }}>
+          <p style={{ color: "#999999", fontSize: "0.75rem", marginBottom: 16, letterSpacing: "0.1em" }}>
             维度分析
           </p>
           {dims.map((d) => {
@@ -770,10 +769,10 @@ function ResultScreen({ character, scores, onRestart }) {
             return (
               <div key={d} style={{ marginBottom: 12 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-                  <span style={{ color: "#a08060", fontSize: "0.8rem" }}>{DIM_LABELS[d]}</span>
-                  <span style={{ color: "#d4a574", fontSize: "0.8rem", fontWeight: 600 }}>{Math.max(0, pct)}%</span>
+                  <span style={{ color: "#6c7780", fontSize: "0.8rem" }}>{DIM_LABELS[d]}</span>
+                  <span style={{ color: "#555555", fontSize: "0.8rem", fontWeight: 600 }}>{Math.max(0, pct)}%</span>
                 </div>
-                <div style={{ height: 6, borderRadius: 3, background: "rgba(255,255,255,0.05)" }}>
+                <div style={{ height: 6, borderRadius: 3, background: "rgba(0,0,0,0.05)" }}>
                   <div style={{
                     height: "100%", borderRadius: 3,
                     background: "linear-gradient(90deg, #F59E0B, #EF4444)",
@@ -801,7 +800,7 @@ function ResultScreen({ character, scores, onRestart }) {
             onClick={onRestart}
             style={{
               background: "transparent",
-              color: "#a08060", border: "1px solid rgba(245,158,11,0.15)",
+              color: "#6c7780", border: "1px solid rgba(72,153,163,0.15)",
               borderRadius: 50, padding: "12px 28px", fontSize: "0.9rem", cursor: "pointer",
             }}
           >
@@ -817,7 +816,7 @@ function ResultScreen({ character, scores, onRestart }) {
           <button
             onClick={downloadCard}
             style={{
-              background: "rgba(245,158,11,0.1)",
+              background: "rgba(72,153,163,0.1)",
               color: "#F59E0B", border: "1px solid rgba(245,158,11,0.2)",
               borderRadius: 50, padding: "10px 24px", fontSize: "0.85rem",
               cursor: "pointer", marginBottom: 12,
@@ -827,7 +826,7 @@ function ResultScreen({ character, scores, onRestart }) {
           </button>
         )}
 
-        <p style={{ color: "#3a2510", fontSize: "0.7rem", marginTop: 16 }}>
+        <p style={{ color: "#bbbbbb", fontSize: "0.7rem", marginTop: 16 }}>
           西游人格测试 · XIYOU BTI
         </p>
       </div>
